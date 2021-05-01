@@ -1,85 +1,142 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <title>Optimax Developers</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 <style>
-body,h1 {font-family: "Raleway", Arial, sans-serif}
-h1 {letter-spacing: 6px}
-.w3-row-padding img {margin-bottom: 12px}
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
 </style>
 <body>
 
-<!-- !PAGE CONTENT! -->
-<div class="w3-content" style="max-width:1500px">
-
-<!-- Header -->
-<header class="w3-panel w3-center w3-opacity" style="padding:32px 16px">
-  <h1 class="w3-xlarge">OPTIMAX DEVELOPERS</h1>
-  <h1>MCM Garden</h1>
-  
-  <div class="w3-padding-32">
-    <div class="w3-bar w3-border">
-      <a href="#" class="w3-bar-item w3-button w3-light-grey">MCM Garden</a>
-      <a href="#" class="w3-bar-item w3-button w3-hide-small">RK Garden</a>
-      <a href="who_are_we.html" class="w3-bar-item w3-button">About Us and Contact Info</a>
-      
-    </div>
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b><i>Welcome to Optimax Developers</i><br></b></h3>
   </div>
+  <div class="w3-bar-block">
+    <a href="new_index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">MCM Garden</a> 
+    <a href="about_us_and_contact.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About Us and Contact</a> 
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+  <span>Optimax Developers</span>
 </header>
 
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
-<div class="w3-row-padding w3-grayscale" style="margin-bottom:128px">
-Our 15th project, MCM Garden has be launched on 8th March 2021. Spread over 3 acres, it will have 53 plots with plot sizes ranging from 3 cents to 5 cents. Major highlights of the new project are:
-<ul>
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>Optimax Developers</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>MCM Garden</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+  
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    Our 15th project, MCM Garden has be launched on 8th March 2021. Spread over 3 acres, it will have 53 plots with plot sizes ranging from 3 cents to 5 cents.<br><br>
+    An excellent investment opportunity. Available at a discounted rate of 1.75 Lakhs per cent until the end of April 2021 as an inaugural offer.<br>
+    We solicit your support to make the project a grand success.<br><br>
+
+    Major highlights of the new project are:<br>
+    <ul>
     <li>Copious water source</li>
     <li>Proximity to the Bazaar, 700 meters from the project</li>
     <li>Well connected with 15 different town bus routes plying in the area facilitating easy access to all important places within Coimbatore city limits</li>
     <li>The project is just 100 meters away from our existing layout, RK Nagar, where 40 houses have already come up</li>
     <li>18 Kilometers from Railway station, 16 Kilometers from Ukkadam Bus stand, 12 Kilometers from the newly integrated bus terminus which is coming up fast at Podanur to Chettipalayam Highway</li>
     <li>It will be at a distance of 2 Kilometer from the proposed 200 feet Western Ring road. MCM and RK Garden will be 1.2 Kilometers away from that road</li>
-</ul>
+    </ul>
 
-It is an excellent investment opportunity. Discounted rate of 1.75 Lakhs per cent is made available till the end of April 2021 as an inaugural offer. We solicit your support to make the project a grand success.
-    
+    <br><h1 class="w3-xlarge w3-text-red"><b>Layout Map and Location</b></h1>
     <div class="w3-half">
-        <img src="images/mcm_garden/MCM_Garden_Layout.jpg" style="width:100%">
+        <img src="images/mcm_garden/MCM_Garden_Layout.jpg" style="width:100%" onclick="onClick(this)" alt="MCM Garden Layout">   
     </div>
+    <br><br><br>
+    <div class="w3-half">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.4266546731274!2d76.9562463148014!3d10.855117992268193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDUxJzE4LjQiTiA3NsKwNTcnMzAuNCJF!5e0!3m2!1sen!2sus!4v1619892029120!5m2!1sen!2sus" width="600" height="750" style="border:64px;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+<!--    <div class="w3-half">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d100921.8397227734!2d-122.50711698562192!3d37.77111185957552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sGithub!5e0!3m2!1sen!2sus!4v1464784986282" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <img src="/w3images/kitchenconcrete.jpg" style="width:100%" onclick="onClick(this)" alt="Concrete meets bricks">
+      <img src="/w3images/livingroom.jpg" style="width:100%" onclick="onClick(this)" alt="Light, white and tight scandinavian design">
+      <img src="/w3images/diningroom.jpg" style="width:100%" onclick="onClick(this)" alt="White walls with designer chairs">
+    </div>
+
+    <div class="w3-half">
+      <img src="/w3images/atrium.jpg" style="width:100%" onclick="onClick(this)" alt="Windows for the atrium">
+      <img src="/w3images/bedroom.jpg" style="width:100%" onclick="onClick(this)" alt="Bedroom and office in one space">
+      <img src="/w3images/livingroom2.jpg" style="width:100%" onclick="onClick(this)" alt="Scandinavian design">
+    </div>
+  </div>
+-->
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Gallery -->
+    
+  <div class="w3-container" id="gallery" style="margin-top:75px">
+    <h1 class="w3-xlarge w3-text-red"><b>Gallery</b></h1>
+    <div class="w3-half">
+      <img src="images/mcm_garden/mcm_garden_1.JPG" width="600" height="375" onclick="onClick(this)" alt="MCM Garden Layout">
+      <img src="images/mcm_garden/mcm_garden_2.JPG" width="600" height="375" onclick="onClick(this)" alt="MCM Garden Layout">
+      <img src="images/mcm_garden/mcm_garden_3.JPG" width="600" height="375" onclick="onClick(this)" alt="MCM Garden Layout">
+      <img src="images/mcm_garden/mcm_garden_4.JPG" width="600" height="375" onclick="onClick(this)" alt="MCM Garden Layout">
+      <img src="images/mcm_garden/mcm_garden_5.JPG" width="600" height="375" onclick="onClick(this)" alt="MCM Garden Layout">
+    </div>
+    <div class="w3-half">
+      <img src="images/mcm_garden/mcm_garden_6.JPG" width="600" height="375" onclick="onClick(this)" alt="MCM Garden Layout">
+      <img src="images/mcm_garden/mcm_garden_7.JPG" width="600" height="375" onclick="onClick(this)" alt="MCM Garden Layout">
+      <img src="images/mcm_garden/mcm_garden_8.JPG" width="600" height="375" onclick="onClick(this)" alt="MCM Garden Layout">
+      <img src="images/mcm_garden/mcm_garden_9.JPG" width="600" height="375" onclick="onClick(this)" alt="MCM Garden Layout">
+      <img src="images/mcm_garden/mcm_garden_10.JPG" width="600" height="375" onclick="onClick(this)" alt="MCM Garden Layout">
+    </div>
+  </div>
+
+<!-- End page content -->
 </div>
 
-<!-- Photo Grid -->
-<!--
-<div class="w3-row-padding w3-grayscale" style="margin-bottom:128px">
-  <div class="w3-half">
-    <img src="/w3images/wedding.jpg" style="width:100%">
-    <img src="/w3images/rocks.jpg" style="width:100%">
-    <img src="/w3images/falls2.jpg" style="width:100%">
-    <img src="/w3images/paris.jpg" style="width:100%">
-    <img src="/w3images/nature.jpg" style="width:100%">
-    <img src="/w3images/mist.jpg" style="width:100%">
-    <img src="/w3images/paris.jpg" style="width:100%">
-  </div>
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-center">Brought to you by <i>Optimax</i></p></div>
 
-  <div class="w3-half">
-    <img src="/w3images/underwater.jpg" style="width:100%">
-    <img src="/w3images/ocean.jpg" style="width:100%">
-    <img src="/w3images/wedding.jpg" style="width:100%">
-    <img src="/w3images/mountainskies.jpg" style="width:100%">
-    <img src="/w3images/rocks.jpg" style="width:100%">
-    <img src="/w3images/underwater.jpg" style="width:100%">
-  </div>
-</div>-->
-<!-- End Page Content -->
-<!--</div>-->
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
 
-
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-large"> 
-    <p><i>Brought to you by: Optimax</i></p>
-</footer>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
 
 </body>
 </html>
